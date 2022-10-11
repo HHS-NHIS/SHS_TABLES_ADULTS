@@ -650,17 +650,29 @@ $(document).ready(function () {
                 x_values = x,
                 y_values = y,
                 y_ses = y_se,
-
                 // hovertemplate= "hovertemplate",
                 y_labels = y_names,
                 showSEs = showSEs);
+
+
+            y_line = y_values.slice(0).toString().split(',').map(Number);
+            y_max22 = Math.max.apply(null, y_line.filter(function (n) { return !isNaN(n); })) + 10;
+
+
+                lcl_y_line = y_ses.slice(0, 1).toString().split(',').map(Number),
+                ucl_y_line = y_ses.slice(-1).toString().split(',').map(Number),
+
+                y_min = Math.min.apply(null, lcl_y_line.filter(function (n) { return !isNaN(n); })),
+                y_max = Math.max.apply(null, ucl_y_line.filter(function (n) { return !isNaN(n); })) + 10,
 
             // hovertemplate= "hovertemplate";
             labelRows = countBreaks(y_labels);
             hideLegend = (rowX == 'ind' && colX == 'ind');
             hideYaxis = false;
             //layout.yaxis = {tickformat: '0,.5',   title: 'Percent'};
-            layout.yaxis = { tickformat: '0,.5', hoverformat: hoverfmt, title: 'Percent' };
+            //layout.yaxis = { tickformat: '0,.5', hoverformat: hoverfmt, title: 'Percent' };
+            //layout.yaxis = { tickformat: '0,.5', range: [0, y_max], hoverformat: hoverfmt, title: 'Percent' };
+            layout.yaxis = { tickformat: '0,.5', range: [0, y_max22], hoverformat: hoverfmt, title: 'Percent' };
             layout.margin.l = 60;
             //layout.xaxis = x.length < 5 ? {tickvals: x_values,  title: 'Year'} : {};
             layout.xaxis = x.length < 15 ? { tickvals: x_values, ticktext: x_names, title: 'Year' } : {};

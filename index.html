@@ -71,10 +71,10 @@
                 <div class="info-box ">
                     <div class="full-screen">
                         <h2>
-                            Interactive Summary Health Statistics for Adults &#8212 2019-2020
+                            Interactive Summary Health Statistics for Adults &#8212 2019-2021
                             <img src="icon_ins.png" alt="healthcare clipboard" class="app-image" />
                         </h2>
-                        <p>Interactive Summary Health Statistics for Adults &#8212 2019-2020 provide annual estimates of selected health topics for adults aged 18 years and over based on final data from the National Health Interview Survey. Estimates can be grouped by characteristics such as age, race, or sex by clicking on the "Group by" dropdown menu.</p>
+                        <p>Interactive Summary Health Statistics for Adults &#8212 2019-2021 provide annual estimates of selected health topics for adults aged 18 years and over based on final data from the National Health Interview Survey. Estimates can be grouped by characteristics such as age, race, or sex by clicking on the "Group by" dropdown menu.</p>
 
                         <p>
                             After you select the available health topics, the table will automatically be updated. The data can be viewed as a plot under the "Charts" tab, with line graphs for trends over time and grouped bar graphs for the cross-sectional view. The "Technical Notes" tab displays links to previous data releases as well as technical documentation on the measures and methodology used to produce the estimates. The generated table and graph can be downloaded with the download button <img height="25px" src="download-white.png"> under each tab. To view the Korn-Graubard confidence intervals, select the "95% confidence intervals" checkbox.
@@ -109,6 +109,7 @@
                                     <option value="ARTHRITIS">Arthritis diagnosis</option>
                                     <option value="PAFRQ3M_R_A">Regularly experienced chronic pain</option>
                                     <option value="DIABETES">Diagnosed diabetes</option>
+                                    <option value="OBESE">Obesity</option>
                                 </optgroup>
                                 <optgroup label="Mental Health">
                                     <option value="ANX_R_A">Regularly had feelings of worry, nervousness, or anxiety</option>
@@ -133,12 +134,12 @@
                                 <optgroup label="Health Behaviors">
                                     <option value="SMKCUR_R_A">Current cigarette smoking</option>
                                     <option value="ECIGCUR_R_A">Current electronic cigarette use</option>
-                                    <option value="OBESE">Obesity</option>
                                 </optgroup>
                                 <optgroup label="Health Insurance Coverage">
                                     <option value="UNINSURED">Uninsured at time of interview: Adults aged 18-64</option>
                                     <option value="PRICOV">Private health insurance coverage at time of interview: Adults aged 18-64</option>
                                     <option value="PUBCOV">Public health plan coverage at time of interview: Adults aged 18-64</option>
+                                    <option value="EXCOV">Exchange-based health plan coverage at time of interview: Adults aged 18-64</option>
                                     <option value="UNSMORY">Uninsured for more than one year: Adults aged 18-64</option>
                                     <option value="ANYPER">Uninsured for at least part of the past year: Adults aged 18-64</option>
                                 </optgroup>
@@ -189,12 +190,14 @@
                                         <select id="year-start">
                                             <option value="2019" selected>2019</option>
                                             <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
                                         </select>
                                     </div>
                                     <div class="flex-child-fill year-main">
                                         <label for="year">to:</label>
                                         <select id="year">
-                                            <option value="2020" selected>2020</option>
+                                            <option value="2021" selected>2021</option>
+                                            <option value="2020">2020</option>
                                             <option value="2019">2019</option>
                                         </select>
                                     </div>
@@ -216,6 +219,7 @@
                                                 <option value="family">Marital status</option>
                                                 <option value="disability">Disability status</option>
                                                 <option value="nativity">Nativity</option>
+                                                <option value="vet">Veteran status</option>
                                             </optgroup>
                                             <optgroup label="Geographic Characteristics">
                                                 <option value="msa">Metropolitan statistical area status</option>
@@ -346,13 +350,17 @@
                                         direct comparisons between estimates for 2019 and beyond to earlier years should be made with caution, as the impact of these changes has not been fully evaluated at this time.
                                         Thus, estimates based on the 2019 and beyond NHIS are shown separately from estimates based on the 2015–2018 NHIS
                                         <a href="https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm" target="_blank_">  (https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm). </a>
-                                        Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020. Personal visits resumed in all areas in September 2020,
-                                        but cases were still attempted by telephone first. These changes resulted in lower response rates and differences in respondent characteristics for April–December 2020.
-                                        Differences observed in estimates between 2020 and 2019 may be impacted by these changes.
-                                        For more information on the data source, methods, and definitions used for this table, refer to Technical Notes for
-                                        Interactive Summary Health Statistics&#8212 2019-2020: National Health Interview Survey
-                                        <a href="https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes.pdff" target="_blank_">
-                                            (available from:  https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes.pdf)
+                                        <br></br>
+                                        Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020.
+                                        Personal visits resumed in all areas in September 2020, but cases were still attempted by telephone first through April 2021.
+                                        Starting in May 2021, interviewers were instructed to return to regular survey interviewing procedures, whereby first contact
+                                        attempts to households were made in person, with follow-up allowed by telephone. Changes to 2020 NHIS data collection resulted
+                                        in lower response rates and differences in respondent characteristics for April–December 2020.
+                                        Differences observed in estimates between 2020 and other time periods may be impacted by these changes.
+                                        <br></br>
+                                        For more information on the data source, methods, and definitions
+                                        used for this table, refer to Technical Notes for Interactive Summary Health Statistics&#8212 2019-2021: National Health Interview Survey <a href="https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes.pdf" target="_blank_">
+                                            (available from: https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes.pdf)
                                         </a>
                                     </p>
                                     <h3>Suggested citation</h3>
@@ -389,13 +397,18 @@
                                     direct comparisons between estimates for 2019 and earlier years should be made with caution, as the impact of these changes has not been fully evaluated at this time.
                                     Thus, estimates based on the 2019 NHIS are shown separately from estimates based on the 2015–2018 NHIS
                                     <a href="https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm" target="_blank_">  (https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm). </a>
-                                    Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020. Personal visits resumed in all areas in September 2020,
-                                    but cases were still attempted by telephone first. These changes resulted in lower response rates and differences in respondent characteristics for April–December 2020.
-                                    Differences observed in estimates between 2020 and 2019 may be impacted by these changes.
-                                    For more information on the data source, methods, and definitions used for this table, refer to Technical Notes for
-                                    Interactive Summary Health Statistics&#8212 2019-2020: National Health Interview Survey
+                                    <br></br>
+                                    Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020.
+                                    Personal visits resumed in all areas in September 2020, but cases were still attempted by telephone first through April 2021.
+                                    Starting in May 2021, interviewers were instructed to return to regular survey interviewing procedures, whereby first contact
+                                    attempts to households were made in person, with follow-up allowed by telephone. Changes to 2020 NHIS data collection resulted
+                                    in lower response rates and differences in respondent characteristics for April–December 2020.
+                                    Differences observed in estimates between 2020 and other time periods may be impacted by these changes.
+                                    <br></br>
+                                    For more information on the data source, methods, and definitions
+                                    used for this table, refer to Technical Notes for Interactive Summary Health Statistics&#8212 2019-2021: National Health Interview Survey
                                     <a href="https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf" target="_blank_">
-                                        (available from:  https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf)
+                                        (available from: https://www.cdc.gov/nchs/data/nhis/SHS_Tech_Notes.pdf)
                                     </a>
                                 </p>
                                 <h3>Suggested citation</h3>
