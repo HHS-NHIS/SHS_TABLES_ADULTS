@@ -672,7 +672,7 @@ $(document).ready(function () {
             //layout.yaxis = {tickformat: '0,.5',   title: 'Percent'};
             //layout.yaxis = { tickformat: '0,.5', hoverformat: hoverfmt, title: 'Percent' };
             //layout.yaxis = { tickformat: '0,.5', range: [0, y_max], hoverformat: hoverfmt, title: 'Percent' };
-            layout.yaxis = { tickformat: '0,.5', range: [0, y_max22], hoverformat: hoverfmt, title: 'Percent' };
+            layout.yaxis = { tickformat: '0,.5', range: [0, y_max22+10], hoverformat: hoverfmt, title: 'Percent' };
             layout.margin.l = 60;
             //layout.xaxis = x.length < 5 ? {tickvals: x_values,  title: 'Year'} : {};
             layout.xaxis = x.length < 15 ? { tickvals: x_values, ticktext: x_names, title: 'Year' } : {};

@@ -1051,13 +1051,30 @@ function myFunction4() {
      var LCL_array = []; var UCL_array = [];
      var SE_split = test[j].toString().split(",").map(Number);  // just split once
      //var SE_split2 = SE_split[j].map(toNumber);
+
+
+           var y_se2 = SE_split.filter(val => !isNaN(val))
+           var sum = y_se2.reduce((a, b) => a + b, 0);
+           var avg = (sum / y_se2.length) || 0;
+           var SE_split2 = SE_split.map(SE_split => { return isNaN(SE_split) ? avg : SE_split });
+
+
      
-     var LCL_new =  SE_split, UCL_new = [];
-     for(var z = LCL_new.length-1; z >= 0; z--) {
-       if(z % 2 === 1) {
-         UCL_new.unshift(LCL_new.splice(z, 1)[0])
-       }
-     }
+           var LCL_new = SE_split2, UCL_new = [];
+           // var LCL_new =  SE_split, UCL_new = [];
+           for (var z = LCL_new.length - 1; z >= 0; z--) {
+               if (z % 2 === 1) {
+                   UCL_new.unshift(LCL_new.splice(z, 1)[0])
+               }
+           }
+
+     
+//     var LCL_new =  SE_split, UCL_new = [];
+//     for(var z = LCL_new.length-1; z >= 0; z--) {
+//      if(z % 2 === 1) {
+//         UCL_new.unshift(LCL_new.splice(z, 1)[0])
+//       }
+//     }
      
        
      var LCLdiff = [];
