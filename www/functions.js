@@ -35,6 +35,7 @@ function mean(array) {
 
 
 
+
 // Quarterly date convertors -------------------------------------------------  
    // Function to convert quarterly strings to numbers 
  function qtr_to_num(str) {  
@@ -579,7 +580,8 @@ function intersection(Item1, Item2) {
        var newlabel = label
        .replaceAll("Inapplicable \\(", "Inapplicable<br>(")
        .replaceAll("hysician", "hys.")
-       .replaceAll("Emergency room", "ER");
+       .replaceAll("Emergency room", "ER")
+       .replaceAll("High school", "HS");
        return newlabel;
        }
        }

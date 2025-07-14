@@ -125,6 +125,7 @@
                                 </optgroup>
                                 <optgroup label="Any Difficulties in Functioning">
                                     <option value="DISABLED2">Disability status (composite)</option>
+                                    <option value="ANYDIFF2">Functioning difficulties status (composite)</option>
                                     <option value="HEARING">Any difficulty hearing</option>
                                     <option value="VISION">Any difficulty seeing</option>
                                     <option value="MOBILITY">Any difficulty walking or climbing steps</option>
@@ -155,6 +156,8 @@
                                     <option value="WELLVISIT">Wellness visit</option>
                                     <option value="EMER12M_R_A">Hospital emergency department visit</option>
                                     <option value="URGECARE">Urgent care center or retail health clinic visit</option>
+                                    <option value="URGE">Urgent care center visit</option>
+                                    <option value="RETAIL">Retail health clinic visit</option>
                                     <option value="DENPREV_R_A">Dental exam or cleaning</option>
                                     <option value="SHFL12M_R_A">Receipt of influenza vaccination</option>
                                     <option value="BPLAST_R_A">Blood pressure check</option>
@@ -194,12 +197,14 @@
                                             <option value="2021">2021</option>
                                             <option value="2022">2022</option>
                                             <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
                                         </select>
                                     </div>
                                     <div class="flex-child-fill year-main">
                                         <label for="year">to:</label>
                                         <select id="year">
-                                            <option value="2023" selected>2023</option>
+                                            <option value="2024" selected>2024</option>
+                                            <option value="2023">2023</option>
                                             <option value="2022">2022</option>
                                             <option value="2021">2021</option>
                                             <option value="2020">2020</option>
@@ -223,6 +228,7 @@
                                                 <option value="hisprace">Hispanic or Latino origin and race</option>
                                                 <option value="family">Marital status</option>
                                                 <option value="disability">Disability status</option>
+                                                <option value="difficulty">Functioning difficulties status</option>
                                                 <option value="nativity">Nativity</option>
                                                 <option value="vet">Veteran status</option>
                                             </optgroup>
@@ -353,8 +359,8 @@
                                         Two-sided 95% confidence intervals are calculated using the Clopper-Pearson method adapted for complex surveys by Korn and Graubard.
                                         In 2019, the NHIS questionnaire was redesigned to better meet the needs of data users. Due to changes in weighting and design methodology,
                                         direct comparisons between estimates for 2019 and beyond to earlier years should be made with caution, as the impact of these changes has not been fully evaluated at this time.
-                                        Thus, estimates based on the 2019 and beyond NHIS are shown separately from estimates based on the 2015–2018 NHIS
-                                        <a href="https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm" target="_blank_">  (https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm). </a>
+                                <!--     Thus, estimates based on the 2019 and beyond NHIS are shown separately from estimates based on the 2015–2018 NHIS
+                                        <a href="https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm" target="_blank_">  (https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm). </a>  -->
                                         <br></br>
                                         Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020.
                                         Personal visits resumed in all areas in September 2020, but cases were still attempted by telephone first through April 2021.
@@ -364,8 +370,8 @@
                                         Differences observed in estimates between 2020 and other time periods may be impacted by these changes.
                                         <br></br>
                                         For more information on the data source, methods, and definitions
-                                        used for this table, refer to Technical Notes for Interactive Summary Health Statistics&#8212 2019-2023: National Health Interview Survey <a href="https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_7.15.24.pdf" target="_blank_">
-                                            (available from: https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_7.15.24.pdf)
+                                        used for this table, refer to Technical Notes for Interactive Summary Health Statistics&#8212 2019-2024: National Health Interview Survey <a href="https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_6.27.25.pdf" target="_blank_">
+                                            (available from: https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_6.27.25.pdf)
                                         </a>
                                     </p>
                                     <h3>Suggested citation</h3>
@@ -400,8 +406,8 @@
                                     Two-sided 95% confidence intervals are calculated using the Clopper-Pearson method adapted for complex surveys by Korn and Graubard.
                                     In 2019, the NHIS questionnaire was redesigned to better meet the needs of data users. Due to changes in weighting and design methodology,
                                     direct comparisons between estimates for 2019 and earlier years should be made with caution, as the impact of these changes has not been fully evaluated at this time.
-                                    Thus, estimates based on the 2019 NHIS are shown separately from estimates based on the 2015–2018 NHIS
-                                    <a href="https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm" target="_blank_">  (https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm). </a>
+                             <!--    Thus, estimates based on the 2019 NHIS are shown separately from estimates based on the 2015–2018 NHIS
+                                    <a href="https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm" target="_blank_">  (https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm). </a> --> 
                                     <br></br>
                                     Due to the COVID-19 pandemic, NHIS data collection switched to a telephone-only mode beginning March 19, 2020.
                                     Personal visits resumed in all areas in September 2020, but cases were still attempted by telephone first through April 2021.
@@ -411,9 +417,9 @@
                                     Differences observed in estimates between 2020 and other time periods may be impacted by these changes.
                                     <br></br>
                                     For more information on the data source, methods, and definitions
-                                    used for this table, refer to Technical Notes for Interactive Summary Health Statistics&#8212 2019-2023: National Health Interview Survey
-                                    <a href="https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_7.15.24.pdf" target="_blank_">
-                                        (available from: https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_7.15.24.pdf)
+                                    used for this table, refer to Technical Notes for Interactive Summary Health Statistics&#8212 2019-2024: National Health Interview Survey
+                                    <a href="https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_6.27.25.pdf" target="_blank_">
+                                        (available from: https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_6.27.25.pdf)
                                     </a>
                                 </p>
                                 <h3>Suggested citation</h3>
@@ -433,7 +439,7 @@
                                 </p>  -->
                                 For more information on the data source, methods, and definitions used for these tables and charts,
                                 refer to Technical Notes for Interactive Summary Health Statistics: National Health Interview Survey
-                                <a href="https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_7.15.24.pdf" target="_blank_">(available from:  https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_7.15.24.pdf)</a>
+                                <a href="https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_6.27.25.pdf" target="_blank_">(available from:  https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/SHS_Tech_Notes_6.27.25.pdf)</a>
                                 <br></br>
                                 Access to the full dataset can be found on Data.CDC.gov by clicking the link below:
                                 <p></p>
@@ -441,8 +447,8 @@
                                 </p>
                                 <br></br>
                                 <p>Previous year Summary Health Statistics may be accessed by clicking the links below:</p>
-                                <p><a href="https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm" target="_blank_">Interactive Summary Health Statistics for Adults (2015 to 2018)</a></p>
-                                <p><a href="https://www.cdc.gov/nchs/nhis/KIDS/www/index.htm" target="_blank_"> Interactive Summary Health Statistics for Children (2015 to 2018)</a></p>
+                         <!--   <p><a href="https://www.cdc.gov/nchs/nhis/ADULTS/www/index.htm" target="_blank_">Interactive Summary Health Statistics for Adults (2015 to 2018)</a></p>
+                                <p><a href="https://www.cdc.gov/nchs/nhis/KIDS/www/index.htm" target="_blank_"> Interactive Summary Health Statistics for Children (2015 to 2018)</a></p>  --> 
                                 <p><a href="https://www.cdc.gov/nchs/nhis/SHS/tables.htm" target="_blank_">Tables of Summary Health Statistics (2013 to 2018)</a></p>
                                 <p><a href="https://www.cdc.gov/nchs/nhis/SHS_1997_2012.htm" target="_blank_">Summary Health Statistics Vital and Health Statistics Series 10 Reports (1997&ndash;2012 NHIS)</a></p>
                                 <p><a href="https://www.cdc.gov/nchs/nhis/quest_doc.htm" target="_blank_">Current Estimates Vital and Health Statistics Series 10 Reports (1962&ndash;1996 NHIS)</a></p>
